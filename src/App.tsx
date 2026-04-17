@@ -9,7 +9,7 @@ const portfolioData = {
       name: "张宇扬",
       avatar: "photo.jpg", 
       title: "AI工程 / 全栈开发",
-      bio: "💻 我是一名充满热情的软件工程师，也是机器学习领域的积极实践者，在全栈开发与人工智能应用方面均拥有扎实的技术基础。凭借在后端系统、云端部署以及应用深度学习方面的实战经验，我热衷于在软件工程与机器学习创新的交叉领域探索并解决复杂问题。\n\n🤝 强大的自学能力、内在驱动力以及对团队协作的高度认同是我不断进步的核心动力。我享受在观点开放交流、多元视角碰撞的团队环境中工作。我特别期待能够通过设计可靠的软件系统，并在大规模平台上推动机器学习应用不断进阶的机会。",
+      bio: "💻 我是一名专注于机器学习与可扩展系统的软件工程师，主要从事后端基础设施、云部署以及应用型深度学习，将机器学习想法落地到真实场景中。业余时间我也会开发游戏——一半是出于好奇，一半是有点上头。",
       location: "洛杉矶, 美国",
       email: "yuyangzhang2003@gmail.com",
       github: "https://github.com/YuyangZhangBarry",
@@ -41,7 +41,7 @@ const portfolioData = {
       {
         id: 1,
         company: "大晟极科技有限公司",
-        role: "算法工程师实习生",
+        role: "AI软件工程师实习生",
         period: "2024.05 - 2024.10",
         description: [
           "采集并预处理来自 抖音 的大规模语音数据，微调基于 Sambert 的声学神经网络，实现 12 个省份的方言口音分类，准确率达 93\% 。",
@@ -111,7 +111,7 @@ const portfolioData = {
       name: "Yuyang Zhang",
       avatar: "photo.jpg",
       title: "AI Engineer / Fullstack Developer",
-      bio: "💻 I am a passionate software engineer and an active practitioner in the field of machine learning, with a solid technical foundation in both full-stack development and AI applications. With practical experience in backend systems, cloud deployment, and applied deep learning, I am enthusiastic about exploring and solving complex problems at the intersection of software engineering and machine learning innovation.\n\n🤝 Strong self-learning ability, intrinsic motivation, and a high regard for teamwork are the core drivers of my continuous progress. I enjoy working in a team environment where ideas are openly exchanged and diverse perspectives collide. I am particularly looking forward to opportunities to design reliable software systems and drive the advancement of machine learning applications on large-scale platforms.",
+      bio: "💻 I'm a software engineer focused on machine learning and scalable systems. I work on backend infrastructure, cloud deployment, and applied deep learning — turning ML ideas into real-world applications. I also build games on the side — part curiosity, part obsession.",
       location: "Los Angeles, USA",
       email: "yuyangzhang2003@gmail.com",
       github: "https://github.com/YuyangZhangBarry",
@@ -143,7 +143,7 @@ const portfolioData = {
       {
         id: 1,
         company: "Dasoundgen Technology Co., Ltd.",
-        role: "Algorithm Engineer Intern",
+        role: "Software Engineer Intern",
         period: "May 2024 - Oct 2024",
         description: [
           "Collected and preprocessed large-scale voice data from Douyin, fine-tuning a Sambert-based acoustic neural network to achieve dialect accent classification across 12 provinces with 93% accuracy.",
