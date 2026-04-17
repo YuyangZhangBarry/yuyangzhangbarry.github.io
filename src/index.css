@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* 主调撞色: #003153 (普鲁士蓝) + #E5DDD7 (暖灰杏) */
+@theme {
+  --color-primary-50: #f8f6f4;
+  --color-primary-100: #e5ddd7;
+  --color-primary-200: #d6cec6;
+  --color-primary-300: #bbb3aa;
+  --color-primary-400: #7a94a8;
+  --color-primary-500: #3d5f78;
+  --color-primary-600: #1a6b8f;
+  --color-primary-700: #0d4d6f;
+  --color-primary-800: #003a56;
+  --color-primary-900: #003153;
+
+  /* 标题：衬线更文雅；正文：圆角无衬线 + 中文黑体 */
+  --font-sans: "Plus Jakarta Sans", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", ui-sans-serif, sans-serif;
+  --font-display: "Noto Serif SC", "Noto Serif", "Songti SC", "STSong", Georgia, serif;
+}
+
+body {
+  @apply bg-primary-50 text-slate-900 antialiased font-sans font-normal;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hero 顶部柔光，随 --color-primary-600 变化 */
+.hero-radial-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -20%,
+    color-mix(in srgb, var(--color-primary-600) 14%, transparent),
+    transparent
+  );
+}
