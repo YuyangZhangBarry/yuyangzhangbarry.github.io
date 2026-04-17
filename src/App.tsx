@@ -9,7 +9,7 @@ const portfolioData = {
       name: "张宇扬",
       avatar: "photo.jpg", 
       title: "AI工程 / 全栈开发",
-      bio: "💻 我是一名专注于机器学习与可扩展系统的软件工程师，主要从事后端基础设施、云部署以及应用型深度学习，将机器学习想法落地到真实场景中。业余时间我也会开发游戏 —— 一半是出于好奇，一半是有点上头。",
+      bio: "💻 我是一名专注于AI应用与系统的软件工程师，主要从事后端基础设施、云部署，将AI应用想法落地到真实场景中。业余时间我也会开发游戏，一半是出于好奇，一半是有点上头。",
       location: "洛杉矶, 美国",
       email: "yuyangzhang2003@gmail.com",
       github: "https://github.com/YuyangZhangBarry",
