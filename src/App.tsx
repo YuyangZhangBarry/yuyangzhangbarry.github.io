@@ -254,13 +254,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-primary-50 font-sans selection:bg-primary-200/60 selection:text-primary-900">
-      {/* Navigation / Language Switcher */}
-      <nav className="absolute top-0 right-0 p-6 z-10">
-        <button 
+      {/* Navigation / Language Switcher — fixed + high z-index so hero layers / mobile compositing never eat taps */}
+      <nav
+        className="fixed top-0 right-0 z-50 flex justify-end p-6 pt-[max(1.5rem,env(safe-area-inset-top))] pr-[max(1.5rem,env(safe-area-inset-right))] pointer-events-none"
+        aria-label="Language"
+      >
+        <button
+          type="button"
           onClick={toggleLanguage}
-          className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 border border-primary-200/80 rounded-full hover:bg-primary-50 hover:text-primary-600 transition-colors shadow-sm font-medium"
+          className="pointer-events-auto flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center gap-2 rounded-full border border-primary-200/80 bg-white px-4 py-2 font-medium text-slate-700 shadow-sm transition-colors hover:bg-primary-50 hover:text-primary-600 active:bg-primary-100"
+          aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
         >
-          <Globe size={18} />
+          <Globe size={18} className="shrink-0" aria-hidden />
           {lang === 'zh' ? 'English' : '中文'}
         </button>
       </nav>
