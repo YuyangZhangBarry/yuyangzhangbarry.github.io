@@ -39,6 +39,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Verify static bundle (not dev index.html)
+        run: |
+          grep -q '/assets/' dist/index.html || { echo "dist/index.html must reference hashed /assets/* bundles from vite build"; exit 1; }
+          if grep -q '/src/main.tsx' dist/index.html; then
+            echo "ERROR: dist/index.html still points at /src/main.tsx"
+            exit 1
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
