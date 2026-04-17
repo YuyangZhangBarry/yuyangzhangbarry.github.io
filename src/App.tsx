@@ -243,7 +243,7 @@ const SectionHeading = ({
 );
 
 function App() {
-  const [lang, setLang] = useState<'zh' | 'en'>('zh');
+  const [lang, setLang] = useState<'zh' | 'en'>('en');
   
   const currentData = portfolioData[lang];
   const { personalInfo, educations, experiences, projects, ui } = currentData;
