@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, ExternalLink, Code2, Briefcase, GraduationCap, Globe } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Code2, Briefcase, GraduationCap, Globe, FileText } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const portfolioData = {
@@ -14,6 +14,8 @@ const portfolioData = {
       email: "yuyangzhang2003@gmail.com",
       github: "https://github.com/YuyangZhangBarry",
       linkedin: "https://www.linkedin.com/in/yuyangz03/",
+      resumeZh: "/resume-zh.pdf",
+      resumeEn: "/resume-en.pdf",
     },
     educations: [
       {
@@ -99,7 +101,9 @@ const portfolioData = {
       contactTitle: "准备好聊聊了吗？",
       contactDesc: "我目前正在寻找新的工作机会。如果你觉得我的经历符合你们的团队需求，或者只是想交流一下技术，随时欢迎联系我！",
       contactBtn: "联系我",
-      footer: "Built with React & Tailwind CSS."
+      footer: "Built with React & Tailwind CSS.",
+      resumeZhLabel: "中文简历",
+      resumeEnLabel: "英文简历",
     }
   },
   en: {
@@ -112,6 +116,8 @@ const portfolioData = {
       email: "yuyangzhang2003@gmail.com",
       github: "https://github.com/YuyangZhangBarry",
       linkedin: "https://www.linkedin.com/in/yuyangz03/",
+      resumeZh: "/resume-zh.pdf",
+      resumeEn: "/resume-en.pdf",
     },
     educations: [
       {
@@ -154,8 +160,8 @@ const portfolioData = {
         period: "Mar 2023 - Nov 2023",
         description: [
           "Participated in the development of an integrated fuzzing platform. By decoupling the underlying engine and scheduling logic, achieved modular integration of mainstream testing technologies such as AFL and LibFuzzer.",
-          "Designed and implemented a dynamic policy configuration module, allowing users to flexibly customize mutation algorithms and seed selection strategies based on target program characteristics, significantly enhancing testing flexibility for complex protocols/programs.",
-          "Optimized the mutation logic and feedback mechanism of test cases, increasing the system's code coverage on specific benchmark datasets from 68% to 83%, and successfully discovered/reproduced multiple potential security vulnerabilities."
+          "Designed and implemented a dynamic policy configuration module, allowing users to flexibly customize mutation algorithms and seed selection strategies based on target program characteristics, significantly enhancing testing flexibility for complex programs.",
+          "Optimized the mutation logic and feedback mechanism of test cases, increasing the system's code coverage on specific benchmark datasets from 68% to 83%, and successfully reproduced multiple potential security vulnerabilities."
         ]
       }
     ],
@@ -198,7 +204,9 @@ const portfolioData = {
       contactTitle: "Ready to connect?",
       contactDesc: "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
       contactBtn: "Get in touch",
-      footer: "Built with React & Tailwind CSS."
+      footer: "Built with React & Tailwind CSS.",
+      resumeZhLabel: "Resume (中文)",
+      resumeEnLabel: "Résumé (EN)",
     }
   }
 };
@@ -304,7 +312,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-4">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
                 <a 
                   href={personalInfo.github} 
                   target="_blank" 
@@ -323,6 +331,28 @@ function App() {
                   <FaLinkedin size={20} />
                   LinkedIn
                 </a>
+                {personalInfo.resumeZh ? (
+                  <a
+                    href={personalInfo.resumeZh}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-primary-200/90 rounded-xl hover:bg-primary-50/80 hover:text-primary-700 transition-colors font-medium tracking-wide shadow-sm"
+                  >
+                    <FileText size={20} className="text-primary-600 shrink-0" />
+                    {ui.resumeZhLabel}
+                  </a>
+                ) : null}
+                {personalInfo.resumeEn ? (
+                  <a
+                    href={personalInfo.resumeEn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-primary-200/90 rounded-xl hover:bg-primary-50/80 hover:text-primary-700 transition-colors font-medium tracking-wide shadow-sm"
+                  >
+                    <FileText size={20} className="text-primary-600 shrink-0" />
+                    {ui.resumeEnLabel}
+                  </a>
+                ) : null}
               </div>
             </div>
 
