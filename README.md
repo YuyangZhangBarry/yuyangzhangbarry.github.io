@@ -1,3 +1,3 @@
 # Portfolio
 
-Source code for my personal portfolio and résumé site (React, Vite, TypeScript).
+Source code for my personal portfolio site (React, Vite, TypeScript).
